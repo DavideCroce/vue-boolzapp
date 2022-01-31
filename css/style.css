@@ -16,17 +16,18 @@ body{
 
 /* container principale */
 
-.contain-all{
+/* .contain-all{
     background-color: lightblue;
     height: 700px;
     width: 1200px;
-}
+} */
 
 /* blocchi */
 
 .block-one{
     background-color: white;
     height: 100%;
+    border-right: solid 2px grey;
 }
 
 .block-two{
@@ -153,4 +154,32 @@ body{
 .data-e-ora{
     color: grey;
     font-size: 10px;
+}
+
+/* sezione write */
+
+.write{
+    background-color: #f3eeea;
+    height: 70px;
+}
+
+.w-icon{
+    color: #717576;
+    font-size: 30px;
+}
+
+.write-a-msg{
+    color: grey;
+    font-size: 15px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    height: 100%;
+}
+
+.msg{
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
 }
