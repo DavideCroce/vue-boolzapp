@@ -26,7 +26,7 @@
                 <section class="user py-3 px-2 d-flex justify-content-between">
                     <!--Informazioni utente-->
                     <div class="user-settings d-flex col-4">
-                        <img :src="`img/avatar${user.avatar}`" class="profile-pics" alt="">
+                        <img :src="`img/avatar${user.avatar}.jpg`" class="profile-pics" alt="">
                         <div class="user-name mx-3 align-self-center">{{ user.name }}</div>
                     </div>
                     <!--Icone di navigazione-->
@@ -53,37 +53,9 @@
                 </section>
                 <!--Contatto-->
                 <section class="contacts">
-                    <div class="contact d-flex px-3 py-3">
-                        <img src="img/avatar_1.jpg" alt="" class="profile-pics align-self-center">
-                        <div class="user-name mx-3">Leona</div>
-                    </div>
-                    <div class="contact d-flex px-3 py-3">
-                        <img src="img/avatar_2.jpg" alt="" class="profile-pics align-self-center">
-                        <div class="user-name mx-3">Lux</div>
-                    </div>
-                    <div class="contact d-flex px-3 py-3">
-                        <img src="img/avatar_3.jpg" alt="" class="profile-pics align-self-center">
-                        <div class="user-name mx-3">Wukong</div>
-                    </div>
-                    <div class="contact d-flex px-3 py-3">
-                        <img src="img/avatar_4.jpg" alt="" class="profile-pics align-self-center">
-                        <div class="user-name mx-3">Professor Graves</div>
-                    </div>
-                    <div class="contact d-flex px-3 py-3">
-                        <img src="img/avatar_5.jpg" alt="" class="profile-pics align-self-center">
-                        <div class="user-name mx-3">Caitlyn</div>
-                    </div>
-                    <div class="contact d-flex px-3 py-3">
-                        <img src="img/avatar_6.jpg" alt="" class="profile-pics align-self-center">
-                        <div class="user-name mx-3">Katarina</div>
-                    </div>
-                    <div class="contact d-flex px-3 py-3">
-                        <img src="img/avatar_7.jpg" alt="" class="profile-pics align-self-center">
-                        <div class="user-name mx-3">Darius</div>
-                    </div>
-                    <div class="contact d-flex px-3 py-3">
-                        <img src="img/avatar_8.jpg" alt="" class="profile-pics align-self-center">
-                        <div class="user-name mx-3">Jayce</div>
+                    <div class="contact d-flex px-3 py-3" v-for="(contact, index) in contacts">
+                        <img :src="`img/avatar${contact.avatar}.jpg`" alt="" class="profile-pics align-self-center">
+                        <div class="user-name mx-3">{{contact.name}}</div>
                     </div>
                 </section>
             </div>
