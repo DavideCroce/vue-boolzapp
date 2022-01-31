@@ -126,3 +126,31 @@ body{
     font-size: 14px;
     color: grey;
 }
+
+/* sezione chat */
+
+.chat{
+    height: 560px;
+    overflow-y: auto;
+    background-image: url(../img/mine.jpg);
+    background-size: cover;
+}
+
+.user-message{
+    background-color: #d5f9ba;
+    max-width: 350px;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact-message{
+    background-color: white;
+    max-width: 350px;
+    border-radius: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.data-e-ora{
+    color: grey;
+    font-size: 10px;
+}
