@@ -102,3 +102,27 @@ body{
     font-size: 14px;
     color: grey;    
 }
+
+/* sezione contatti */
+.contacts{
+    height: 510px;
+    overflow-y: auto;
+}
+.contact{
+    height: 80px;
+    border-top: solid 2px #e9ebeb;
+}
+
+.contact:hover{
+    background-color: #e9ebeb;
+    cursor: pointer;
+}
+
+/* SECONDO BLOCCO */
+
+/* sezione profilo interlocutore */
+
+.last-access{
+    font-size: 14px;
+    color: grey;
+}
