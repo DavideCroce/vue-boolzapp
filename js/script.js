@@ -6,6 +6,7 @@ const boolzapp = new Vue ({
     el: '#root',
     data: {
       currentIndex: 0,
+      newmessage: '',
         user: {
           name: 'Ezreal',
           avatar: '_io'
@@ -235,11 +236,22 @@ const boolzapp = new Vue ({
         ]
       },
       methods: {
-        chatVisualized(index){
-          this.currentIndex = messages[index];
-        },
         active(index){
          this.currentIndex = index;
+        },
+        addMessage(){
+          const newmessage = this.newmessage.trim();
+          if(newmessage){
+              this.contacts[this.currentIndex].messages.push({data:'10/01/2020', text: newmessage, status:'sent'});
+          }
+          this.newmessage = '';
+          setTimeout(addAnswer, 1000);
+          function addAnswer(newmessage){
+            if(newmessage){
+              this.contacts[this.currentIndex].messages.push({data:'10/01/2020', text: 'ok', status:'received'});
+            }
+            
+          }
         },
       }
 });

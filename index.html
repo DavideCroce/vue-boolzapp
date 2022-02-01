@@ -107,7 +107,7 @@
                 <section class="chat d-flex flex-column">
                          <!--Messaggio dell'utente-->
 
-                     <div id="message" class=" px-2 py-2 mx-3 my-3 d-flex flex-column justify-content-end align-self-end" v-for="(message, index) in contacts[currentIndex].messages">
+                     <div id="message" class=" px-2 py-2 mx-3 my-3 d-flex flex-column justify-content-end" v-for="(message, index) in contacts[currentIndex].messages" :class="{'user-message': message.status === 'sent', 'contact-message': message.status === 'received'}">
                         <p class="message px-2">{{message.text}}</p>
                         <div class="data-e-ora text-end">{{message.data}}</div>
                      </div>
@@ -129,7 +129,7 @@
                     </div>
                     <div class="col-10">
                         <div class="msg d-flex align-items-center px-2">
-                            <input type="text" placeholder="Scrivi un messaggio" class="write-a-msg">
+                            <input type="text" placeholder="Scrivi un messaggio" class="write-a-msg" v-model="newmessage" @keyup.enter="addMessage()">
                         </div>
                     </div>
                     <div class="col-1 w-icon px-3 text-end">

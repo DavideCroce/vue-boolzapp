@@ -146,6 +146,7 @@ input:active{
     max-width: 350px;
     border-radius: 15px;
     font-family: 'Montserrat', sans-serif;
+    align-self: flex-end;
 }
 
 .contact-message{
@@ -153,6 +154,7 @@ input:active{
     max-width: 350px;
     border-radius: 15px;
     font-family: 'Montserrat', sans-serif;
+
 }
 
 .data-e-ora{
