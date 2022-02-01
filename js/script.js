@@ -5,6 +5,7 @@ Vue.config.devtool = true;
 const boolzapp = new Vue ({
     el: '#root',
     data: {
+      currentIndex: 0,
         user: {
           name: 'Ezreal',
           avatar: '_io'
@@ -232,5 +233,27 @@ const boolzapp = new Vue ({
             ],
           }
         ]
+      },
+      methods: {
+        chatVisulized(index){
+          this.currentIndex = messages[index];
+        },
+        active(index){
+          return index === this.currentIndex;
+        },
+        messagesent(){
+          this.contacts[index] === contact;
+          this.contact.messages[index] === message;
+          if (this.message.status = 'sent'){
+            return message;
+          };
+        },
+        messagereceived(){
+          this.contacts[index] === contact;
+          this.contact.messages[index] === message;
+          if(this.message.status = 'received'){
+            return message
+          }
+        }
       }
 });

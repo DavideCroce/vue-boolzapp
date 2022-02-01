@@ -17,3 +17,16 @@ Consigli e raccomandazioni:
 - Cerchiamo di mettere in pratica tutte le best practice imparate a partire dalla centralizzazione.
 - Se lo ritenete potete utilizzare Bootstrap nella misura che ritenete opportuna
 - Completiamo la grafica prima di passare alla logica di vue
+
+Giorno 2:
+
+Milestone 2
+Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i messaggi relativi al contatto attivo all’interno del pannello della conversazione
+Click sul contatto mostra la conversazione del contatto cliccato
+Milestone 3
+Aggiunta di un messaggio: l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
+Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+Note:
+All'interno della cartella trovate le immagini che vi servono e la struttura dati necessaria per la milestone di oggi. Per la struttura dati, ritagliate l'oggetto fornito e inseritelo nel vostro data di Vue!
+Sono a disposizione per i ticket fino alle 13 e nel pomeriggio i tutor saranno disponibili dallle 15 alle 18
+NON MODIFICATE LA STRUTTURA DATI FORNITA

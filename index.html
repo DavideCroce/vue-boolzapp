@@ -85,10 +85,10 @@
 
                     <!--Informazioni interlocutore-->
                     
-                    <div class="user-settings d-flex col-4">
-                        <img src="img/avatar_1.jpg" class="profile-pics" alt="">
+                    <div class="user-settings d-flex col-4" v-for="(contact, index) in contacts" v-if="active(index)">
+                        <img :src="`img/avatar${contact.avatar}.jpg`" class="profile-pics" alt="">
                         <div class="profile">
-                            <div class="user-name mx-3 align-self-center">Leona</div>
+                            <div class="user-name mx-3 align-self-center">{{contact.name}}</div>
                             <div class="last-access mx-3 align-self-center">Ultimo accesso oggi alle</div>
                     </div>                        
                     </div>
