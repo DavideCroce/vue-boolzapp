@@ -245,13 +245,17 @@ const boolzapp = new Vue ({
               this.contacts[this.currentIndex].messages.push({data:'10/01/2020', text: newmessage, status:'sent'});
           }
           this.newmessage = '';
-          setTimeout(addAnswer, 1000);
-          function addAnswer(newmessage){
+          
+        },
+        addAnswer(){
+          setTimeout(answer, 1000);
+          
+          function answer(){
+            const newmessage = this.newmessage.trim();
             if(newmessage){
               this.contacts[this.currentIndex].messages.push({data:'10/01/2020', text: 'ok', status:'received'});
-            }
-            
-          }
-        },
+            } 
+          };
+        }
       }
 });
