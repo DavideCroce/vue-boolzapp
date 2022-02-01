@@ -231,7 +231,7 @@ const boolzapp = new Vue ({
                 status: 'received',
               }
             ],
-          }
+          },
         ]
       },
       methods: {
@@ -254,6 +254,9 @@ const boolzapp = new Vue ({
           if(this.message.status = 'received'){
             return message
           }
+        },
+        selectedContact(index){
+          
         }
       }
 });
