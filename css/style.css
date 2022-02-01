@@ -87,6 +87,10 @@ body{
 
 /* sezione search */
 
+input:active{
+    border: none;
+}
+
 .search{
     background-color: #dad5d5;
     height: 50px;
@@ -134,7 +138,7 @@ body{
     height: 560px;
     overflow-y: auto;
     background-image: url(../img/mine.jpg);
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 .user-message{
