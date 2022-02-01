@@ -68,7 +68,7 @@
                 <!--Contatto-->
 
                 <section class="contacts">
-                    <div class="contact d-flex px-3 py-3" v-for="(contact, index) in contacts" @click="selectedContact()">
+                    <div class="contact d-flex px-3 py-3" v-for="(contact, index) in contacts" @click="active(index)">
                         <img :src="`img/avatar${contact.avatar}.jpg`" alt="" class="profile-pics align-self-center">
                         <div class="user-name mx-3">{{contact.name}}</div>
                     </div>
@@ -85,10 +85,10 @@
 
                     <!--Informazioni interlocutore-->
                     
-                    <div class="user-settings d-flex col-4" v-for="(contact, index) in contacts" v-if="active(index)">
-                        <img :src="`img/avatar${contact.avatar}.jpg`" class="profile-pics" alt="">
+                    <div class="user-settings d-flex col-4">
+                        <img :src="`img/avatar${contacts[currentIndex].avatar}.jpg`" class="profile-pics" alt="">
                         <div class="profile">
-                            <div class="user-name mx-3 align-self-center">{{contact.name}}</div>
+                            <div class="user-name mx-3 align-self-center">{{contacts[currentIndex].name}}</div>
                             <div class="last-access mx-3 align-self-center">Ultimo accesso oggi alle</div>
                     </div>                        
                     </div>
@@ -105,20 +105,20 @@
                 <!--Sezione chat-->
 
                 <section class="chat d-flex flex-column">
+                         <!--Messaggio dell'utente-->
 
-                    <!--Messaggio dell'utente-->
-
-                    <div class="user-message px-2 py-2 mx-3 my-3 d-flex flex-column justify-content-end align-self-end">
-                        <p class="message px-2">Domani ho lezione sul combattimento?</p>
-                        <div class="data-e-ora text-end">10/01/2020 15:30</div>
-                    </div>
+                     <div id="message" class=" px-2 py-2 mx-3 my-3 d-flex flex-column justify-content-end align-self-end" v-for="(message, index) in contacts[currentIndex].messages">
+                        <p class="message px-2">{{message.text}}</p>
+                        <div class="data-e-ora text-end">{{message.data}}</div>
+                     </div>
 
                     <!--Messaggio dell'interlocutore-->
 
-                    <div class="contact-message px-2 py-2 mx-3 my-3 d-flex flex-column">
+                     <!-- <div class="contact-message px-2 py-2 mx-3 my-3 d-flex flex-column">
                         <p class="message px-2">Si con il prof Graves</p>
                         <div class="data-e-ora text-end">10/01/2020 17:50</div>
-                    </div>
+                     </div> -->
+
                 </section>
 
                 <!--Sezione write-->

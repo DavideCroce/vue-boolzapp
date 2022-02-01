@@ -235,28 +235,11 @@ const boolzapp = new Vue ({
         ]
       },
       methods: {
-        chatVisulized(index){
+        chatVisualized(index){
           this.currentIndex = messages[index];
         },
         active(index){
-          return index === this.currentIndex;
+         this.currentIndex = index;
         },
-        messagesent(){
-          this.contacts[index] === contact;
-          this.contact.messages[index] === message;
-          if (this.message.status = 'sent'){
-            return message;
-          };
-        },
-        messagereceived(){
-          this.contacts[index] === contact;
-          this.contact.messages[index] === message;
-          if(this.message.status = 'received'){
-            return message
-          }
-        },
-        selectedContact(index){
-          
-        }
       }
 });
