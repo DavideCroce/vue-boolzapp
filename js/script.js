@@ -5,6 +5,7 @@ Vue.config.devtool = true;
 const boolzapp = new Vue ({
     el: '#root',
     data: {
+      search: '',
       currentIndex: 0,
       newmessage: '',
         user: {
@@ -251,7 +252,33 @@ const boolzapp = new Vue ({
           this.newmessage = '';
           
         },
+        /*per la ricerca dei nomi usare filter,
+        - prima di questo gestire il visible, facendo si che quando è "false"
+        i contatti della contact list non siano visibili
+        -mettere nel css una classe con display-none da aggiungere al contatto 
+        il cui nome non contiene le lettere scritte.
+        tutto questo dentro la funzione del filter da collegare nell'hatml con un
+        v-if*/
+        okfilter(contact){
+          if(this.search === ''){
+            return true;
+          }else{
+            return contact.name.toLowerCase().includes(this.search.toLowerCase())
+          }
+        }
+
+      },
+      // computed: {
+      //   filteredList() {
+      //     if(this.search !== ''){
+
           
-          
-      }
+      //     return this.contacts.filter(contact => {
+      //       return contact.name.toLowerCase().includes(this.search.toLowerCase())
+      //     })
+      //   } else{
+      //     return this.contacts;
+      //   }
+      //   }
+      // },
 });

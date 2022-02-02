@@ -30,3 +30,14 @@ Note:
 All'interno della cartella trovate le immagini che vi servono e la struttura dati necessaria per la milestone di oggi. Per la struttura dati, ritagliate l'oggetto fornito e inseritelo nel vostro data di Vue!
 Sono a disposizione per i ticket fino alle 13 e nel pomeriggio i tutor saranno disponibili dallle 15 alle 18
 NON MODIFICATE LA STRUTTURA DATI FORNITA
+
+Giorno 3:
+
+Milestone 4
+Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
+Milestone 5 - opzionale
+Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato (vedi immagine in allegato)
+Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti 
+NOTE:
+Ricordate di includere la proprietà visible nella nostra logica di ricerca
+Sono a disposizione per i ticket fino alle 13 e nel pomeriggio i tutor saranno disponibili dalle 15 alle 18.

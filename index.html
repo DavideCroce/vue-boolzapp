@@ -61,14 +61,14 @@
                 <section class="search d-flex align-items-center justify-content-center">
                     <div class="white-bg d-flex align-items-center">
                         <i class="fas fa-search ps-4 pe-3"></i>
-                        <input type="text" class="search-bar" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" v-model="search" class="search-bar" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </section>
 
                 <!--Contatto-->
 
                 <section class="contacts">
-                    <div class="contact d-flex px-3 py-3" v-for="(contact, index) in contacts" @click="active(index)">
+                    <div class="contact d-flex px-3 py-3" v-for="(contact, index) in contacts" @click="active(index)" v-if="okfilter(contact)">
                         <img :src="`img/avatar${contact.avatar}.jpg`" alt="" class="profile-pics align-self-center">
                         <div class="user-name mx-3">{{contact.name}}</div>
                     </div>

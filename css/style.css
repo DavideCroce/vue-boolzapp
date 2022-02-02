@@ -189,3 +189,9 @@ input:active{
     background-color: #fff;
     border-radius: 15px;
 }
+
+/* Cancellare contatti che non sono le filtro */
+
+.delete{
+    display: none;
+}
